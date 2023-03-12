@@ -22,7 +22,6 @@ async function generateVanityAddress(prefix) {
       let count = 0;
       let wallet = await getRandomWallet();
       while (!wallet.address.toLowerCase().startsWith(prefix.toLowerCase())) {
-        console.log(JSON.stringify({ count, address: wallet.address }));
         wallet = await getRandomWallet();
         count++;
       }
@@ -33,4 +32,6 @@ async function generateVanityAddress(prefix) {
   });
 }
 
-generateVanityAddress("0xabcdef").then((wallet) => console.log(wallet));
+module.exports={
+  generateVanityAddress
+}

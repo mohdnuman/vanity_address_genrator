@@ -1,4 +1,4 @@
-const { generateVanityAddress } = require("./vanity");
+const { generateVanityAddress } = require("./vanity_eoa");
 const assert = require("assert");
 
 describe("Vanity Address Generator", async function () {
